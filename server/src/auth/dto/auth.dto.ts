@@ -43,7 +43,6 @@ export class LoginDto {
   @IsNotEmpty({ message: 'Password is required' })
   password: string;
 }
-
 export class AuthResponse {
   user_id: Object;
   access_token: string;

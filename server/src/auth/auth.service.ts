@@ -2,7 +2,8 @@ import {
   Injectable,
   ConflictException,
   UnauthorizedException,
-  BadRequestException,
+  HttpException,
+  HttpStatus,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
@@ -16,19 +17,19 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async login(UserData: LoginDto): Promise<AuthResponse>  {
+  async login(UserData: LoginDto): Promise<AuthResponse> {
     const { username, password } = UserData;
     const user = await this.usersService.findByUsername(username);
 
     if (!user) {
-      throw new UnauthorizedException('Invalid username or password');
+      throw new HttpException('Invalid credentials', HttpStatus.FORBIDDEN);
     }
 
     const hashPassword = user.password;
     const isMatch = await comparePassword(password, hashPassword);
 
     if (!isMatch) {
-      throw new UnauthorizedException('Invalid username or password');
+      throw new HttpException('Invalid credentials', HttpStatus.FORBIDDEN);
     }
 
     const payload = { username: user.username, sub: user._id };

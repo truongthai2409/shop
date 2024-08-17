@@ -1,27 +1,41 @@
-import React from "react";
-import * as Yup from "yup";
+// import React from 'react';
+
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
-import { usernameValidation, passwordValidation } from "./validate_schema";
-import { useLogin } from "../../hooks";
+import * as Yup from "yup";
+import {
+  phoneValidation,
+  passwordValidation,
+  usernameValidation,
+  emailValidation,
+} from "../login/validate_schema";
+import { useRegister } from "../../hooks";
 
-const Login: React.FC = () => {
-  const mutation = useLogin();
-
+const Register = () => {
+  const mutation = useRegister();
   const formik = useFormik({
     initialValues: {
       username: "",
+      phone: "",
+      email: "",
       password: "",
+      status: "",
     },
     validationSchema: Yup.object({
       username: usernameValidation,
+      phone: phoneValidation,
+      email: emailValidation,
       password: passwordValidation,
     }),
     onSubmit: async (values) => {
       const data = {
         username: values.username,
+        phone: values.phone,
+        email: values.email,
         password: values.password,
+        status: '1',
       };
+      console.log(data);
       mutation.mutate(data);
     },
   });
@@ -32,7 +46,7 @@ const Login: React.FC = () => {
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Sign in to your account
+              Sign up
             </h1>
             <form
               className="space-y-4 md:space-y-6"
@@ -50,14 +64,61 @@ const Login: React.FC = () => {
                   name="username"
                   id="username"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="User Name"
+                  placeholder="First Name"
                   value={formik.values.username}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
+                  autoCapitalize="on"
                 />
                 {formik.touched.username && formik.errors.username ? (
                   <div className="text-sm text-red-600">
                     {formik.errors.username}
+                  </div>
+                ) : null}
+              </div>
+              <div>
+                <label
+                  htmlFor="last_name"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Last Name"
+                  value={formik.values.phone}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.phone && formik.errors.phone ? (
+                  <div className="text-sm text-red-600">
+                    {formik.errors.phone}
+                  </div>
+                ) : null}
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Email
+                </label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.email && formik.errors.email ? (
+                  <div className="text-sm text-red-600">
+                    {formik.errors.email}
                   </div>
                 ) : null}
               </div>
@@ -77,6 +138,7 @@ const Login: React.FC = () => {
                   value={formik.values.password}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
+                  autoCapitalize="on"
                 />
                 {formik.touched.password && formik.errors.password ? (
                   <div className="text-sm text-red-600">
@@ -108,15 +170,15 @@ const Login: React.FC = () => {
                 type="submit"
                 className="w-full text-white bg-gray-600 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
               >
-                Login
+                Sign up
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet ?{"  "}
+                Already have an account ?{" "}
                 <Link
-                  to="/register"
+                  to="/login"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
-                  Sign up
+                  Sign In
                 </Link>
               </p>
             </form>
@@ -127,4 +189,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Register;

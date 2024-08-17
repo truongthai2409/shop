@@ -23,7 +23,7 @@ export class AuthController {
     return this.authService.register(registerDto);
   }
 
-  @Post('refresh')
+  @Post('refresh_token')
   async refresh(@Body('refresh_token') refreshToken: string){
     return this.authService.refresh(refreshToken);
   }
@@ -32,4 +32,5 @@ export class AuthController {
   async logout(@Body('user_id') userId: string) {
     return this.authService.logout(userId);
   }
+  
 }

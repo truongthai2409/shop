@@ -15,11 +15,21 @@ interface Route {
   private?: boolean;
 }
 interface LoginData {
-  email: string;
+  username: string;
   password: string;
 }
+interface RegisterData {
+  username: string;
+  phone: string;
+  email: string;
+  password: string;
+  status: string;
+}
 interface LoginResponse {
-  token: string;
+  user_id?: string;
+  access_token?: string | undefined;
+  refresh_token?: string;
+  message: string;
   // Các thuộc tính khác nếu có
 }
 interface Category {
@@ -33,4 +43,5 @@ interface Product {
   description: string;
   images: string[];
 }
-export type { Route, LoginData, Category, Product, LoginResponse }
+
+export type { Route, LoginData, Category, Product, LoginResponse, RegisterData }
