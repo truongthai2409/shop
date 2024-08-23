@@ -4,9 +4,10 @@ import axios, {
   InternalAxiosRequestConfig,
   RawAxiosRequestHeaders,
 } from "axios";
+import { VITE_API_BE } from "..";
 
 const http = (URL?: string) => {
-  const baseURL = URL || (import.meta.env.VITE_API_BE as string);
+  const baseURL = URL || (VITE_API_BE as string);
   const instance = axios.create({
     baseURL: baseURL,
     headers: {
@@ -124,3 +125,22 @@ const http = (URL?: string) => {
 };
 
 export default http;
+
+// async error => {
+//   const originalRequest = error.config;
+  
+//   // Kiểm tra nếu lỗi là do token hết hạn và chưa thực hiện refresh trước đó
+//   if (error.response.status === 401 && !originalRequest._retry) {
+//     originalRequest._retry = true;
+//     const refreshToken = localStorage.getItem('refresh_token');
+    
+//     // Gọi API refresh token
+//     const { data } = await axios.post('/auth/refresh', { refresh_token: refreshToken });
+    
+//     // Lưu lại access_token mới và tiếp tục request
+//     localStorage.setItem('access_token', data.access_token);
+//     axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`;
+//     return axiosInstance(originalRequest);
+//   }
+//   return Promise.reject(error);
+// }

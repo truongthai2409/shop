@@ -26,9 +26,9 @@ interface RegisterData {
   status: string;
 }
 interface LoginResponse {
-  user_id?: string;
-  access_token?: string | undefined;
-  refresh_token?: string;
+  user_id: string;
+  access_token: string | null;
+  refresh_token: string;
   message: string;
   // Các thuộc tính khác nếu có
 }
