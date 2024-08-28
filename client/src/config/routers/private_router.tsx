@@ -9,7 +9,6 @@ interface PrivateRouteProps {
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ element }) => {
   const isAuthenticated = useAppSelector((state: RootStateAuth) => state.auth.isAuthenticated);
-  console.log(isAuthenticated)
   return isAuthenticated ? element : <Navigate to="/login"/>;
 };
 

@@ -1,19 +1,3 @@
-// src/types/types.ts
-
-// import { ReactNode } from 'react';
-interface ElementProps {
-  userId: number;
-  userName: string;
-  // Thêm các props khác nếu có
-}
-interface Route {
-  path: string;
-  // element:;
-  element: React.ComponentType<ElementProps>;
-  // element: unknown;
-  exact?: boolean;
-  private?: boolean;
-}
 interface LoginData {
   username: string;
   password: string;
@@ -30,7 +14,6 @@ interface LoginResponse {
   access_token: string | null;
   refresh_token: string;
   message: string;
-  // Các thuộc tính khác nếu có
 }
 interface Category {
   id: number;
@@ -44,4 +27,4 @@ interface Product {
   images: string[];
 }
 
-export type { Route, LoginData, Category, Product, LoginResponse, RegisterData }
+export type {  LoginData, Category, Product, LoginResponse, RegisterData }

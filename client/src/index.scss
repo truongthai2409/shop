@@ -1,37 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=AmstelvarAlpha:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Font+Awesome+6+Brands:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Font+Awesome+6+Free:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    // body{
-    //   @apply bg-slate-900 font-body px-5;
-    // }
+@layer base {
+  body {
+    // @apply bg-slate-900 font-body px-5;
+    color: black;
   }
-  @layer components{
-    .page-container{
-      max-width: 1200px;
-      @apply mx-auto;
-    }
-    .movie-list .swiper-slide {
-      width: 300px;
-      height: auto;
-    }
-    .banner .swiper {
-      height: 100%;
-    }
-    .trung_tam {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-    }
-    .pagination{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      .selected{
-        @apply text-primary;
-      }
+}
+@layer components {
+  .page-container {
+    @apply mx-auto 2xl:max-w-[1320px] lg:max-w-[1000px];
+  }
+  .movie-list .swiper-slide {
+    width: 300px;
+    height: auto;
+  }
+  .banner .swiper {
+    height: 100%;
+  }
+  .trung_tam {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .selected {
+      @apply text-primary;
     }
   }
+}

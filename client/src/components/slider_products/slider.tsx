@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+const SliderProducts: React.FC = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Footer: React.FC = () => {
     );
 };
 
-export default Footer;
+export default SliderProducts;

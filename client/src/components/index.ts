@@ -1,0 +1,11 @@
+export { default as BrandBanner } from './brand_banner/brand_banner';
+// export { default as Cart } from './cart/';
+export { default as Footer } from './footer/Footer';
+export { default as GridProducts } from './grid_products/grid_product';
+export { default as Header } from './header/header';
+export { default as HotCategory } from './hot_category/hot_category';
+// export { default as NewsletterIG } from './newsletter_ig';
+export { default as Product } from './product/ProductList';
+export { default as Sidebar } from './sidebar';
+export { default as SliderProducts } from './slider_products/slider';
+export { default as TopMain } from './top_main/top_main';

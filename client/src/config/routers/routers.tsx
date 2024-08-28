@@ -1,13 +1,14 @@
 import { RouteObject } from "react-router-dom";
-import HomePage from "../../pages/home";
-import AdminPage from "../../pages/admin";
-import Login from "../../pages/login";
-import Register from "../../pages/register";
 import PrivateRoute from "./private_router";
+import HomePage from "../../pages/home/home";
+import AdminPage from "../../pages/admin/admin";
+import Login from "../../pages/login/login";
+import Register from "../../pages/register/register";
+import Page404 from "../../pages/404/error";
 
 const routers: RouteObject[] = [
   {
-    path: "/home",
+    path: "/",
     element: <PrivateRoute element={<HomePage />} />,
   },
   {
@@ -21,6 +22,10 @@ const routers: RouteObject[] = [
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "*",
+    element: <Page404 />,
   },
 ];
 
