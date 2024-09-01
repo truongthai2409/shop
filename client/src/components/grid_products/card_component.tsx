@@ -19,15 +19,15 @@ const CardComponent: React.FC<CardComponentProps> = ({ image, title, category, p
         )}
       </div>
       <div className="lg:w-[210px] 2xl:w-[292px] mx-auto">
-        <h3 className="mt-3 font-semibold text-gray-900 2xl:text-lg">{title}</h3>
+        <h3 className="mt-2 font-semibold text-gray-900 2xl:text-lg">{title}</h3>
         <div className='flex items-baseline justify-between'>
             <p className="text-sm text-gray-600">{category}</p>
-            <div className="mt-2">
+            <div className="mt-2 mb-2">
             {originalPrice && (
                 <span className="mr-2 text-gray-500 line-through">${originalPrice.toFixed(2)}</span>
             )}
             <span className="font-bold text-red-500">${price.toFixed(2)}</span>
-            </div>
+            </div> 
         </div>
       </div>
     </div>

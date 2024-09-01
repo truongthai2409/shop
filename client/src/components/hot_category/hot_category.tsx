@@ -13,7 +13,7 @@ const HotCategory: React.FC = () => {
       <div className="grid grid-cols-2 gap-4 my-20">
       <div className="relative col-span-1">
         <img src="/img18@2x.png" alt="Large Fashion Image" className="object-cover w-full h-full aspect-square"/>
-        <div className="absolute bottom-0 font-semibold origin-top-left transform -rotate-90 lg:left-8 2xl:-left-12 lg:-left-[2rem] 2xl:-bottom-6 lg:bottom-1 lg:text-2xl 2xl:text-4xl">
+        <div className="absolute bottom-0 font-semibold origin-top-left transform -rotate-90 2xl:-left-12 lg:-left-[2rem] 2xl:-bottom-6 lg:bottom-1 lg:text-2xl 2xl:text-4xl">
           EXPLORE NEW AND POPULAR STYLES
         </div>
       </div>

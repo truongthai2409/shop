@@ -1,17 +1,30 @@
-import React from 'react';
-import { BrandBanner, Header, HotCategory, TopMain } from '../../components';
-import GridProduct from '../../components/grid_products/grid_product';
+import React from "react";
+import {
+  BrandBanner,
+  Footer,
+  GridProducts,
+  Header,
+  HotCategory,
+  InstagramSlider,
+  NewsletterSubscription,
+  SliderProducts,
+  TopMain,
+} from "../../components";
 
-const HomePage : React.FC = () => {
-    return (
-        <>
-            <Header/>
-            <TopMain/>
-            <HotCategory/>
-            <GridProduct/>
-            <BrandBanner/>
-        </>
-    );
+const HomePage: React.FC = () => {
+  return (
+    <>
+      <Header />
+      <TopMain />
+      <HotCategory />
+      <GridProducts />
+      <BrandBanner />
+      <SliderProducts />
+      <InstagramSlider/>
+      <NewsletterSubscription/>
+      <Footer/>
+    </>
+  );
 };
 
 export default HomePage;

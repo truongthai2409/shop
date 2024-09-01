@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           <h1 className="items-center flex-grow px-2 text-3xl">CORAL</h1>
           <img className="w-[2rem] h-[1rem]" src="group-97.svg" alt="" />
         </div>
-        <div className="w-[300px] flex items-center justify-end space-x-4 w-28 h-14">
+        <div className="w-[300px] flex items-center justify-end space-x-4 h-14">
           <span className="flex items-center cursor-pointer">
             <FaUser />
             <span className="ml-2">Account</span>
