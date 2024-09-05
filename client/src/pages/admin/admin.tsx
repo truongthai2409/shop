@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ProductForm from '../../components/cart/ProductForm';
+import ProductForm from '../../components/product/product_form';
 
 const AdminPage = () => {
   const [refresh, setRefresh] = useState(false);

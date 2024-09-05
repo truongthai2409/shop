@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 interface Product {
+  id: string;
   image: string;
   title: string;
   category: string;
@@ -16,24 +17,28 @@ interface Product {
 
 const products: Product[] = [
   {
+    id: "",
     image: "/img15@2x.png",
     title: "Adicolor Classics Joggers",
     category: "Dress",
     price: 63.85,
   },
   {
+    id: "",
     image: "/img14@2x.png",
     title: "Nike Sportswear Futura Luxe",
     category: "Bag",
     price: 130.0,
   },
   {
+    id: "",
     image: "/img13@2x.png",
     title: "Geometric Print Scarf",
     category: "Scarf",
     price: 53.0,
   },
   {
+    id: "",
     image: "/img04@2x.png",
     title: "Yellow Reserved Hoodie",
     category: "Dress",
@@ -42,6 +47,7 @@ const products: Product[] = [
     label: "SALE",
   },
   {
+    id: "",
     image: "/img11@2x.png",
     title: "Basic Dress Green",
     category: "Dress",
@@ -49,6 +55,7 @@ const products: Product[] = [
     label: "HOT",
   },
   {
+    id: "",
     image: "/img12@2x.png",
     title: "Nike Air Zoom Pegasus",
     category: "Shoe",
@@ -57,12 +64,14 @@ const products: Product[] = [
     label: "SALE",
   },
   {
+    id: "",
     image: "/img17@2x.png",
     title: "Nike Repel Miler",
     category: "Dress",
     price: 120.5,
   },
   {
+    id: "",
     image: "/img16@2x.png",
     title: "Nike Sportswear Futura Luxe",
     category: "Glasses",

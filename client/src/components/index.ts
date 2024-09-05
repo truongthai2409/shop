@@ -1,11 +1,12 @@
 export { default as BrandBanner } from './brand_banner/brand_banner';
 export { default as Footer } from './footer/footers';
-export { default as GridProducts } from './grid_products/grid_product';
+export { default as GridProduct } from './grid_products/grid_product';
 export { default as Header } from './header/header';
 export { default as HotCategory } from './hot_category/hot_category';
-export { default as Product } from './product/ProductList';
 export { default as Sidebar } from './sidebar';
 export { default as SliderProducts } from './slider_products/slider';
 export { default as TopMain } from './top_main/top_main';
 export { default as InstagramSlider } from './newsletter_ig/instagram_slider';
 export { default as NewsletterSubscription } from './newsletter_ig/newsletter';
+export { default as FloatingCartIcon } from './cart/cart_icon';
+export { default as CartList } from './cart/cart_list';

@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import auth_slice from "./slices/auth_slice";
+import cart_slice from "./slices/cart_slice";
 import { VITE_API_BE } from "../config";
 
 const persistConfig = {
@@ -9,11 +10,12 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, auth_slice);
+const persistedAuthReducer = persistReducer(persistConfig, auth_slice);
 
 const store = configureStore({
   reducer: {
-    auth: persistedReducer,
+    auth: persistedAuthReducer,
+    cart: cart_slice, // Add the cart slice here
   },
   devTools: VITE_API_BE !== "product",
   middleware: (getDefaultMiddleware) =>
@@ -25,5 +27,5 @@ const store = configureStore({
 export const persistor = persistStore(store);
 export default store;
 
-export type AppDispatchAuth = typeof store.dispatch;
-export type RootStateAuth = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;

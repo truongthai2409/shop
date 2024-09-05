@@ -18,6 +18,9 @@
   .page-container {
     @apply mx-auto 2xl:max-w-[1320px] lg:max-w-[1000px];
   }
+  .image-scale {
+    @apply transition-transform duration-300 ease-in-out transform justify-items-center group-hover:scale-105
+  }
   .movie-list .swiper-slide {
     width: 300px;
     height: auto;
