@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { FaHeart, FaSearch } from "react-icons/fa";
 import { addToCart } from "../../stores/slices/cart_slice";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 interface CardComponentProps {
   id: string;

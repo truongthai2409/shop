@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { RootStateAuth } from '../../stores';
+import { RootState } from '../../stores';
 import { useAppSelector } from '../../hooks/use_app_dispatch';
 
 interface PrivateRouteProps {
@@ -8,7 +8,7 @@ interface PrivateRouteProps {
 } 
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ element }) => {
-  const isAuthenticated = useAppSelector((state: RootStateAuth) => state.auth.isAuthenticated);
+  const isAuthenticated = useAppSelector((state: RootState) => state.auth.isAuthenticated);
   return isAuthenticated ? element : <Navigate to="/login"/>;
 };
 
