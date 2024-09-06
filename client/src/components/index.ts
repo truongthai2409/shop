@@ -3,7 +3,6 @@ export { default as Footer } from './footer/footers';
 export { default as GridProduct } from './grid_products/grid_product';
 export { default as Header } from './header/header';
 export { default as HotCategory } from './hot_category/hot_category';
-export { default as Sidebar } from './sidebar';
 export { default as SliderProducts } from './slider_products/slider';
 export { default as TopMain } from './top_main/top_main';
 export { default as InstagramSlider } from './newsletter_ig/instagram_slider';
