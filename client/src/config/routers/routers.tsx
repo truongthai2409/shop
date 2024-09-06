@@ -9,7 +9,7 @@ import Page404 from "../../pages/404/error";
 const routers: RouteObject[] = [
   {
     path: "/",
-    element: <PrivateRoute element={<HomePage />} />,
+    element: <HomePage />,
   },
   {
     path: "/admin",
