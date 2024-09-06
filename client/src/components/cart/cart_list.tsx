@@ -9,13 +9,14 @@ interface CartListProps {
 
 const CartList: React.FC<CartListProps> = ({ isCartOpen, handleCartButtonClick }) => {
   const cartItems = useAppSelector((state: RootState) => state.cart.items);
+
   useEffect(() => {
     if (isCartOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
-    // Cleanup on component unmount or when isCartOpen changes
+
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
@@ -24,7 +25,7 @@ const CartList: React.FC<CartListProps> = ({ isCartOpen, handleCartButtonClick }
   return (
     <>
       <div
-        className={`fixed top-0 right-0 w-[300px] h-full bg-white shadow-lg z-50 transform transition-transform ${
+        className={`h-full overflow-x-auto fixed top-0 right-0 w-[300px] bg-white shadow-lg z-50 transform transition-transform ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -43,10 +44,12 @@ const CartList: React.FC<CartListProps> = ({ isCartOpen, handleCartButtonClick }
           ) : (
             <ul>
               {cartItems.map((item) => (
-                <li
-                  key={item.id}
-                  className="flex items-center justify-between mb-4"
-                >
+                <li key={item.id} className="flex items-center justify-between mb-4">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover w-12 h-12 mr-4 rounded-md"
+                  />
                   <div>
                     <p className="font-semibold">{item.title}</p>
                     <p className="text-gray-600">

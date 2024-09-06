@@ -72,12 +72,14 @@ const GridProduct: React.FC = () => {
     <Element name="grid_product" className="2xl:mb-[100px] mb-20 page-container">
       <h1 className="text-4xl font-semibold">Or subscribe to the newsletter</h1>
       <div className="flex items-center justify-between my-8">
-        <ul className="flex">
-          <li className="mr-8 font-bold">All Products</li>
-          <li className="mr-8">T-Shirt</li>
-          <li className="mr-8">Hoodies</li>
-          <li className="mr-8">Jecket</li>
-        </ul>
+        <div className="w-[380px]">
+          <ul className="nav-head">
+            <li className="font-bold">All Products<span></span></li>
+            <li>T-Shirt<span></span></li>
+            <li>Hoodies<span></span></li>
+            <li>Jecket<span></span></li>
+          </ul>
+        </div>
         <button className="flex items-center px-3 py-2 pr-3 text-white bg-black">
           <FaFilter className="inline-block mr-2" />
           Filter

@@ -18,29 +18,26 @@
   .page-container {
     @apply mx-auto 2xl:max-w-[1320px] lg:max-w-[1000px];
   }
-  .image-scale {
-    @apply transition-transform duration-300 ease-in-out transform justify-items-center group-hover:scale-105
+  .nav-head {
+    li {
+      span {
+        @apply absolute bottom-0 left-0 w-0 h-[2px] bg-black transition-all duration-300;
+      }
+      &:hover span {
+        @apply w-full;
+      }
+      @apply relative px-2;
+    }
+    @apply flex justify-between w-full leading-10 text-center cursor-pointer;
   }
   .movie-list .swiper-slide {
     width: 300px;
     height: auto;
-  }
-  .banner .swiper {
-    height: 100%;
   }
   .trung_tam {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-  }
-  .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    .selected {
-      @apply text-primary;
-    }
   }
 }

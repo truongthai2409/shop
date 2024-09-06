@@ -8,7 +8,6 @@ interface FloatingCartIconProps {
 }
 
 const Header: React.FC<FloatingCartIconProps> = ({ onCartIconClick }) => {
-
   return (
     <div className="w-full h-full bg-secondary">
       <header className="page-container pt-[1rem] text-black">
@@ -42,19 +41,13 @@ const Header: React.FC<FloatingCartIconProps> = ({ onCartIconClick }) => {
           </div>
         </div>
         <div className="flex w-full mt-6">
-          <ul className="flex justify-between w-full cursor-pointer">
-            <li className="pr-2 leading-10 text-center">
-              Jewelry & Accessories
-            </li>
-            <li className="px-2 leading-10 text-center">Clothing & Shoes</li>
-            <li className="px-2 leading-10 text-center">Home & Living</li>
-            <li className="px-2 leading-10 text-center">Wedding & Party</li>
-            <li className="px-2 leading-10 text-center">
-              Toys & Entertainment
-            </li>
-            <li className="pl-2 leading-10 text-center">
-              Craft Supplies & Tools
-            </li>
+          <ul className="nav-head">
+            <li>Jewelry & Accessories<span></span></li>
+            <li>Clothing & Shoes<span></span></li>
+            <li>Home & Living<span></span></li>
+            <li>Wedding & Party<span></span></li>
+            <li>Toys & Entertainment<span></span></li>
+            <li>Craft Supplies & Tools<span></span></li>
           </ul>
         </div>
       </header>
