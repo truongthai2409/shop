@@ -69,7 +69,7 @@ const products = [
 
 const GridProduct: React.FC = () => {
   return (
-    <Element name="grid_product" className="2xl:mb-[100px] mb-20 page-container">
+    <Element name="grid_product" className="2xl:mb-[100px] mb-20 page-container lg:block hidden">
       <h1 className="text-4xl font-semibold">Or subscribe to the newsletter</h1>
       <div className="flex items-center justify-between my-8">
         <div className="w-[380px]">
@@ -77,7 +77,7 @@ const GridProduct: React.FC = () => {
             <li className="font-bold">All Products<span></span></li>
             <li>T-Shirt<span></span></li>
             <li>Hoodies<span></span></li>
-            <li>Jecket<span></span></li>
+            <li>Jacket<span></span></li>
           </ul>
         </div>
         <button className="flex items-center px-3 py-2 pr-3 text-white bg-black">

@@ -20,6 +20,9 @@ export default {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+
+      // '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
     },
     extend: {
       colors: {

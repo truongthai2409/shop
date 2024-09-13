@@ -17,7 +17,7 @@ const HotCategory: React.FC = () => {
             alt="Large Fashion Image"
             className="object-cover w-full h-full aspect-square"
           />
-          <div className="absolute bottom-0 font-semibold origin-top-left transform -rotate-90 2xl:-left-12 lg:-left-[2rem] 2xl:-bottom-6 lg:bottom-1 lg:text-2xl 2xl:text-4xl">
+          <div className="hidden lg:block absolute bottom-0 font-semibold origin-top-left transform -rotate-90 2xl:-left-12 lg:-left-[2rem] 2xl:-bottom-6 lg:bottom-1 lg:text-2xl 2xl:text-4xl">
             EXPLORE NEW AND POPULAR STYLES
           </div>
         </div>
@@ -49,3 +49,5 @@ const HotCategory: React.FC = () => {
 };
 
 export default HotCategory;
+
+

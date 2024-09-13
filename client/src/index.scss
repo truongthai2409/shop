@@ -28,7 +28,7 @@
       }
       @apply relative px-2;
     }
-    @apply flex justify-between w-full leading-10 text-center cursor-pointer;
+    @apply flex flex-wrap xl:justify-between w-full leading-10 text-center cursor-pointer;
   }
   .movie-list .swiper-slide {
     width: 300px;

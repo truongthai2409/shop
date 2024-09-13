@@ -148,7 +148,7 @@ const SliderProducts: React.FC = () => {
 
   return (
     <div className="h-lvh page-container">
-      <h1 className="text-4xl font-semibold">Best Sellers</h1>
+      <h1 className="text-4xl font-semibold 2xl:pt-[80px]">Best Sellers</h1>
       <div className="flex items-center justify-between my-8">
         <ul className="flex">
           <li className="mr-8 font-bold">All Products</li>
