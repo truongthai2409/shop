@@ -1,0 +1,5 @@
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #ccc; /* Đường viền ngoài chữ với màu xám nhạt */
+    font-weight: bold;
+  }

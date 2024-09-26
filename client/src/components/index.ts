@@ -9,3 +9,4 @@ export { default as InstagramSlider } from './newsletter_ig/instagram_slider';
 export { default as NewsletterSubscription } from './newsletter_ig/newsletter';
 export { default as FloatingCartIcon } from './cart/cart_icon';
 export { default as CartList } from './cart/cart_list';
+export { default as Counter } from './counter';

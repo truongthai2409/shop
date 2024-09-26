@@ -1,3 +1,4 @@
+import './abc.css'
 import React, { useState, useEffect, useRef } from "react";
 import {
   BrandBanner,
@@ -12,7 +13,6 @@ import {
   SliderProducts,
   TopMain,
 } from "../../components";
-
 
 const HomePage: React.FC = () => {
   const [isCartOpen, setIsCartOpen] = useState(false); // State to toggle cart visibility
@@ -74,13 +74,19 @@ const HomePage: React.FC = () => {
       {showCartIcon && (
         <FloatingCartIcon onCartIconClick={handleCartButtonClick} />
       )}
-      <CartList isCartOpen={isCartOpen} handleCartButtonClick={handleCartButtonClick} />
+      <CartList
+        isCartOpen={isCartOpen}
+        handleCartButtonClick={handleCartButtonClick}
+      />
       {isCartOpen && (
         <div
           onClick={handleCartButtonClick}
           className="fixed inset-0 z-40 bg-black opacity-50"
         />
       )}
+      <div className="flex items-center justify-center h-screen bg-gray-100">
+        
+      </div>
     </>
   );
 };
